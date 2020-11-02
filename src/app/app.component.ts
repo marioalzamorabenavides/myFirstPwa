@@ -14,17 +14,6 @@ export class AppComponent {
 
     if (serviceWorker.isEnabled) {
 
-      serviceWorker.activated.subscribe(
-        resp => {
-          console.log(resp);
-
-        },
-        error => {
-          console.log(error);
-
-        }
-      );
-
       serviceWorker.available.subscribe(() => {
 
         if (confirm("Existe una nueva version.")) {
