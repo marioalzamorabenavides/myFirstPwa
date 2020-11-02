@@ -1,0 +1,37 @@
+
+@import '~@angular/material/theming';
+@import 'bootstrap/dist/css/bootstrap-grid.min.css';
+@import 'bootstrap/dist/css/bootstrap-reboot.min.css';
+
+@include mat-core();
+
+mat-card{
+    width: 100%;
+}
+
+body{
+    background-color: #ebeaff;
+}
+
+$serviceWorkerExample-primary: mat-palette($mat-indigo);
+$serviceWorkerExample-accent: mat-palette($mat-pink, A200, A100, A400);
+$serviceWorkerExample-warn: mat-palette($mat-red);
+
+$serviceWorkerExample-theme: mat-light-theme($serviceWorkerExample-primary, $serviceWorkerExample-accent, $serviceWorkerExample-warn);
+
+.dark-theme{
+    
+    body{
+        background-color: #e8e8e8;
+    }
+
+    $serviceWorkerExample-primary: mat-palette($mat-indigo);
+    $serviceWorkerExample-accent: mat-palette($mat-pink, A200, A100, A400);
+    $serviceWorkerExample-warn: mat-palette($mat-red);
+    
+    $serviceWorkerExample-theme: mat-dark-theme($serviceWorkerExample-primary, $serviceWorkerExample-accent, $serviceWorkerExample-warn);
+}
+
+
+@include angular-material-theme($serviceWorkerExample-theme);
+

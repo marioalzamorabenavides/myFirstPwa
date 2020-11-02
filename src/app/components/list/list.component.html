@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-4 my-2" *ngFor="let data of listData">
+        <mat-card class="pl-0" matRipple>
+            <div class="d-flex align-items-center">
+                <img [src]="data?.image" width="100px" />
+                <div class="ml-2">
+                    <mat-card-title>{{data?.name}}</mat-card-title>
+                    <mat-card-subtitle class="m-0">{{data?.league}}</mat-card-subtitle>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>
